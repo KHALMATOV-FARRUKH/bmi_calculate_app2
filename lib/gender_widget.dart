@@ -34,6 +34,8 @@ class _GenderWidgetState extends State<GenderWidget> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           ChoiceChip3D(
+              width: 150,
+              height: 150,
               border: Border.all(color: Colors.grey),
               style: _gender == 1 ? selectedStyle : unselectedStyle,
               onSelected: (){
@@ -46,18 +48,21 @@ class _GenderWidgetState extends State<GenderWidget> {
               selected: _gender == 1,
               child: Column(
                 children: [
+                  const SizedBox(height: 10,),
                   Image.asset("assets/images/man.png",
-                    width: 55,
+                    width: 100,
                   ),
                   const SizedBox(
                     height: 5,
                   ),
-                  const Text("Male")
+                  const Text("Male", style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),)
                 ],
               )),
           const SizedBox(width: 20,
           ),
           ChoiceChip3D(
+              width: 150,
+              height: 150,
               border: Border.all(color: Colors.grey),
               style: _gender == 2 ? selectedStyle : unselectedStyle,
               onSelected: (){
@@ -70,13 +75,14 @@ class _GenderWidgetState extends State<GenderWidget> {
               onUnSelected: (){},
               child: Column(
                 children: [
+                  const SizedBox(height: 10,),
                   Image.asset("assets/images/woman.png",
-                    width: 55,
+                    width: 100,
                   ),
                   const SizedBox(
                     height: 5,
                   ),
-                  const Text("Female")
+                  const Text("Female", style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),)
                 ],
               ))
         ],
